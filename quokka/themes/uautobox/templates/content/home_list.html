@@ -1,0 +1,343 @@
+{% extends theme("base.html") %}
+{% from theme('_helpers.html') import render_list, render_pagination with context %}
+
+{% block title %} {{ channel.title.split('/')|join(' | ') }} |
+    {{ Config.get('site', 'site_name', 'Quokka site') }} {% endblock %}
+
+{% block seo_meta %}
+    <meta name="description"
+          content="{{ channel.description or Config.get('site', 'site_description') }}">
+    {% if channel.tags %}
+        <meta name="keywords" content="{{ channel.tags|join(',') }}">
+    {% else %}
+        <meta name="keywords"
+              content="{{ Config.get('site', 'site_keywords') }}">
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="content wrap">
+        <div class="content-left left">
+            <div class="content-left-item content-left-item1">
+                <h2 class="left-item-title">
+                    <div class="left font16">配件图标</div>
+                    <div class="right"><a href="" class="color-blue more">+
+                        MORE</a></div>
+                </h2>
+                <div class="left-item-content left-item-content1">
+                    <ul>
+                        <li class="left">
+                            <a href="http://ford.uautobox.com" target="_blank">
+                                <img src="{{ theme_static('images/common/uautobox-Brand.png') }}">
+                            </a>
+                        </li>
+                        <li class="left">
+                            <a href="http://vw.uautobox.com" target="_blank">
+                                <img src="{{ theme_static('images/common/vw_logo.png') }}">
+                            </a>
+                        </li>
+                        <li class="left">
+                            <a href="http://au.uautobox.com" target="_blank">
+                                <img src="{{ theme_static('images/common/audi_logo.png') }}">
+                            </a>
+                        </li>
+                        <li class="left">
+                            <a href="http://se.uautobox.com" target="_blank">
+                                <img src="{{ theme_static('images/common/seat_logo.png') }}">
+                            </a>
+                        </li>
+                        <li class="left">
+                            <a href="http://sk.uautobox.com" target="_blank">
+                                <img src="{{ theme_static('images/common/skoda_logo.png') }}">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-left-item content-left-item2">
+                <h2 class="left-item-title">
+                    <div class="left font16">工具配件</div>
+                    <div class="right"><a href="" class="color-blue more">+
+                        MORE</a></div>
+                </h2>
+                <div class="left-item-content left-item-content2">
+                    <div class="item-content2">
+                        <ul>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="">
+                                    <img src="{{ theme_static('images/common/uautobox-product.png') }}">
+                                    <P class="text-c">车轮计算</P>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="left-button button color-fff"><i
+                            class="iconfont iconfont-14 icon-left-open"></i></p>
+                    <p class="right-button button color-fff"><i
+                            class="iconfont iconfont-14 icon-right-open"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="content-left-item3 content-right-item">
+                <h2 class="right-item-title">
+                    <div class="left right-item-title-l">
+                        <img src="{{ theme_static('images/common/item-title01.png') }}">
+                    </div>
+                    <div class="right"><a href="" class="color-blue more">+
+                        MORE</a></div>
+                </h2>
+                <div class="right-item-content">
+                    <ul>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                        <li>
+                            <a href="">Parts cataloge品牌目录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-right right">
+            <div class="content-right-item mg-b20 content-right-item1">
+                <h2 class="right-item-title">
+                    <div class="left right-item-title-l">
+                        <img src="{{ theme_static('images/common/item-title02.png') }}">
+                    </div>
+                    <div class="right"><a href="" class="color-blue more">+
+                        MORE</a></div>
+                </h2>
+                <div class="right-item-content">
+                    <ul>
+                        <li>
+                            <a href="https://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483875&idx=1&sn=079de7d4a8d9920ce62b830e7c9de557&chksm=e91119edde6690fbcd2e7828780fe6d74847fcd111b7cd813bf9348958c694dd65575b36777a&scene=0&key=117aa60093186f3a6ce043b1f0685613266dcf3e2af76293c79010548e43ba001523bff20bf4d407b92ce83155398314eebfb485054bfb0ef3c38ec190108440f76738055aa95893a5644d51166abb85&ascene=0&uin=Mzk1MzAyNDU1&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12+build(16A323)&version=12010210&nettype=WIFI&fontScale=100&pass_ticket=Sco7jbMqYOcir%2FAIpZaM8SXiFbQH%2BVyIm%2FU%2BxeliBKkmZXsRAh3Sq01gCotvnuS8"
+                               target="_blank">
+                                <div class="left mg-r20"><img
+                                        src="{{ theme_static('images/common/uautobox-img01.png') }}">
+                                </div>
+                                <div class="left">
+                                    <p>如何在大车服网站挑选需要的产品呢？</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483858&idx=1&sn=4ad4873ff8b7244aca7115c174d8086f&chksm=e91119dcde6690ca81c06ac9c996d070abce2cdec2ea6a70a890afebd8deb4d94b83596e8855&scene=4#wechat_redirect"
+                               target="_blank">
+                                <div class="left mg-r20"><img
+                                        src="{{ theme_static('images/common/uautobox-img01.png') }}">
+                                </div>
+                                <div class="left">
+                                    <p>自检刹车片，刹车片的好坏又该如何判定？</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483839&idx=1&sn=7d99d6cb192712ace2b54eb3dbd4171b&chksm=e91119b1de6690a7bc5c8bf3d0789b6af1ec766daaf13012bae7f5b1a3a12507d60ed5efdefa&scene=4#wechat_redirect"
+                               target="_blank">
+                                <div class="left mg-r20"><img
+                                        src="{{ theme_static('images/common/uautobox-img01.png') }}">
+                                </div>
+                                <div class="left">
+                                    <p>透析盘式刹车与鼓式刹车之奥秘</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483819&idx=1&sn=f77edc16e6b9fa72ff4a382ff0295819&chksm=e91119a5de6690b314e918723f3ebe65e8b47cf0c50c766e5e19157b98e3780267bef521df46&scene=4#wechat_redirect"
+                               target="_blank">
+                                <div class="left mg-r20"><img
+                                        src="{{ theme_static('images/common/uautobox-img01.png') }}">
+                                </div>
+                                <div class="left">
+                                    <p>车展很多人讨论，但更深入的汽配展你知道吗？</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-right-item mg-b10 content-right-item2">
+                <h2 class="right-item-title">
+                    <div class="left right-item-title-l">
+                        <img src="{{ theme_static('images/common/item-title03.png') }}">
+                    </div>
+                    <div class="right"><a href="" class="color-blue more">+
+                        MORE</a></div>
+                </h2>
+                <div class="right-item-content">
+                    <ul>
+                        <li>
+                            <a target="_blank"
+                               href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483739&idx=1&sn=1dd7c98c3776be424f036a18331d3ef8&chksm=e9111955de6690439bf618d8faa575107a416c6d2a2d9cedb45e36f86743f5723ce40229dd59&scene=4#wechat_redirect">
+                                <div class="left mg-r20 font45 bold text-c news-no">
+                                    01
+                                </div>
+                                <div class="left">
+                                    <p>小众品牌机油汇总（力魔篇）</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                    <p class="color-999 font12"><i
+                                            class="iconfont iconfont-16 icon-clock"></i>2016-10-20
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483725&idx=1&sn=15df1c05b2aba12921b9eef6b9feff55&chksm=e9111943de6690551d826289e033831d46bb29084e455f21297283491f3526f1b37781a96b81&scene=4#wechat_redirect">
+                                <div class="left mg-r20 font45 bold text-c news-no">
+                                    02
+                                </div>
+                                <div class="left">
+                                    <p>如何自己动手更换空气/空调滤芯</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                    <p class="color-999 font12"><i
+                                            class="iconfont iconfont-16 icon-clock"></i>2016-10-20
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="http://mp.weixin.qq.com/s?__biz=MzI0MTEyNzc3Nw==&mid=2247483702&idx=1&sn=75bd246e6a68afe1cd3bc273748441fb&chksm=e9111938de66902e04ab33f020d4054caaa0f2ae90e9fedfa361897e3923d5c156acb117e476&scene=4#wechat_redirect">
+                                <div class="left mg-r20 font45 bold text-c news-no">
+                                    03
+                                </div>
+                                <div class="left">
+                                    <p>国外对各个品牌机油的高温测试</p>
+                                    <p class="color-999 font12">优车合/汽车时代</p>
+                                    <p class="color-999 font12"><i
+                                            class="iconfont iconfont-16 icon-clock"></i>2016-10-20
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% include theme('footer.html') %}
+{% endblock %}
+<script>
+    $(function(){
+        var num = 0;
+        $('.right-button').click(function(){
+            num++;
+            if( num == 3 ){
+                num = 0;
+            }
+            $('.item-content2 ul').stop().animate({'left':-num*660},500);
+        });
+
+        $('.left-button').click(function(){
+            num--;
+            if( num == -1 ){
+                num = 2;
+            }
+            $('.item-content2 ul').stop().animate({'left':-num*660},500);
+        });
+
+    });
+</script>

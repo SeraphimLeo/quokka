@@ -1,0 +1,187 @@
+/*样式初始化*/
+*{margin:0;padding:0;list-style: none;}
+img{border:none;max-width:100%;vertical-align:middle;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+input,textarea{-webkit-user-select:text;-ms-user-select:text;user-select:text;/*-webkit-appearance:none;*/font-size:1em;line-height:1.5em;}
+table{border-collapse:collapse;}
+input,select,textarea{outline:none;border:none;background:none;}
+a{outline:0;cursor:pointer;color:#333;}
+a:link,a:active{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none; color:#ffa200;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+em,i{font-style:normal;}
+li,ol{list-style:none;}
+.clear{clear:both;height:0;font-size:0;line-height:0;visibility:hidden; overflow:hidden;}
+body{ margin:0 auto;-webkit-text-size-adjust:none;position: relative;color:#666;font-size:14px;font-family:"微软雅黑";}
+/*公共样式*/
+.right{
+    float:right;
+}
+.left{
+    float:left;
+}
+.mg-l5{
+    margin-left:5px;
+}
+.mg-l10{
+    margin-left:10px;
+}
+.mg-r5{
+    margin-right:5px;
+}
+.mg-r10{
+    margin-right:10px;
+}
+.mg-r20{
+    margin-right:20px;
+}
+.mg-b5{
+    margin-bottom:5px;
+}
+.mg-b10{
+    margin-bottom:10px
+}
+.mg-b20{
+    margin-bottom:20px
+}
+.mg-t5{
+    margin-top:5px;
+}
+.mg-t10{
+    margin-top:10px;
+}
+.mg-t20{
+    margin-top:20px;
+}
+.mg-t50{
+    margin-top:50px;
+}
+.color-fff{
+    color:#fff;
+}
+.color-333{
+    color:#333;
+}
+.color-999{
+    color:#999;
+}
+.color-red{
+    color:#ff0000;
+}
+.color-f5{
+    color:#f5f5f5;
+}
+.color-blue{
+    color:#1e458a
+}
+.bold{
+    font-weight: 600;
+}
+.font12{
+    font-size: 12px;
+}
+.font16{
+    font-size: 16px;
+}
+.font20{
+    font-size: 20px;
+}
+.font45{
+    font-size: 45px;
+}
+.bgcolor-blue{
+    background: #1E458A;
+}
+.bgcolor-gray{
+    background:#f4f4f4;
+}
+.iblock{
+    display: inline-block;
+}
+.text-l{
+    text-align: left;
+}
+.text-r{
+    text-align: right;
+}
+.text-c{
+    text-align: center;
+}
+.close{
+    display: none;
+}
+.bbox{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.border-radius{
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius:2px;
+    -moz-border-radius:2px;
+}
+.wrap{
+    width:1200px;
+    margin:0 auto;
+}
+/*--------------头部-------------*/
+.site-nav{
+    height:58px;
+    line-height:58px;
+    /*letter-spacing:1px;*/
+}
+.logo{
+    padding:20px 0;
+}
+.logo a{
+    display: block;
+    width:390px;
+    height:85px;
+    background: url("../images/common/uautobox-logo.png") no-repeat 0 0;
+    overflow: hidden;
+}
+.logo a h1{
+    text-indent: -999px;
+}
+.nav{
+    width:100%;
+    height:80px;
+    font-size: 0;
+    margin-bottom:27px;
+}
+.nav a{
+    display: inline-block;
+    font-size:18px;
+    width:146px;
+    height:100%;
+    line-height:80px;
+    text-align: center;
+    color:#fff;
+}
+.nav a:hover{
+    background-color:rgba(255,162,0,0.6);
+}
+.nav a.logo-active{
+    color:#1e458a;
+    background:#ffa200;
+}
+/*-------------------footer----------------------*/
+.footer{
+    height:190px;
+    width:100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-top:40px;
+    padding-bottom:20px;
+}
+.footer .footer-left p{
+    line-height:28px;
+    padding-left:190px;
+}
+.footer .footer-right{
+    width:280px;
+    display: block;
+}
